@@ -29,7 +29,7 @@ end
 
 def random_initial_centroids(points, k)
   centroids = []
-  (0...k).each do |i}
+  (0...k).each do |i|
     centroids[i] = points[rand(0...points.length)]
   end
   
