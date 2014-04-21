@@ -21,7 +21,7 @@ def kmeans(points, k, iterations)
     # Calculate new centroid
     new_centroids = []
     clusters.each do |cluster|
-      new_centroids = calculate_centroid(cluster) unless cluster.nil?
+      new_centroids << calculate_centroid(cluster) unless cluster.nil?
     end
     
     centroids = new_centroids
