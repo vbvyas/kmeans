@@ -12,7 +12,7 @@ def kmeans(points, k, iterations)
     clusters = []
     
     points.each do |p|
-      clusters[closest_centroid(p, centroids)] << p
+      clusters[closest_centroid(p, centroids)] = p
     end
     
     # Calculate new centroid
