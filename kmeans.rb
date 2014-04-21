@@ -10,6 +10,9 @@ def kmeans(points, k, iterations)
   iterations.times do
     # Initialize clusters
     clusters = []
+    (0...k).each do |i|
+      clusters[i] = []
+    end
     
     points.each do |p|
       clusters[closest_centroid(p, centroids)] = p
