@@ -6,6 +6,7 @@
 def kmeans(points, k, iterations)
   # assign random clusters
   centroids = random_initial_centroids(points, k)
+  clusters = []
   iterations.times do
     clusters = []
     (0...k).each do |i|
@@ -23,8 +24,9 @@ def kmeans(points, k, iterations)
     end
     
     centroids = new_centroids
-    clusters
   end
+  
+  clusters
 end
 
 def random_initial_centroids(points, k)
